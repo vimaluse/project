@@ -18,5 +18,5 @@ class vimal:
 
 
 v1 = vimal()
-v1.prime(7)
-v1.palindrome(454)
+v1.prime(11)
+v1.palindrome(545)
