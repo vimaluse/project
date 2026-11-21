@@ -4,6 +4,7 @@ from app.services.website_extractor import fetch_website
 from app.services.llm_service import generate_analysis
 from app.utils.validators import normalize_and_validate_url
 
+
 def infer_brand_name(site: dict) -> str:
     title = site.get("title", "").strip()
     if title:
