@@ -10,6 +10,13 @@ app = FastAPI(
     description="Evidence-aware website intelligence and market analysis API",
     version="1.0.0",
 )
+
+from fastapi.responses import RedirectResponse
+
+@app.get("/", include_in_schema=False)
+async def home():
+    return RedirectResponse(url="/docs")
+
 cache = AnalysisCache(settings.cache_db)
 
 @app.get("/health")
